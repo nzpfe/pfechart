@@ -4,7 +4,7 @@
 image:
   repository: pfe2023.azurecr.io
   name: sampleapi
-  tag: "56"
+  tag: "57"
   pullPolicy: IfNotPresent
 
 # -- Number of pod replicas
