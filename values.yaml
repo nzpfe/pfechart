@@ -1,6 +1,7 @@
 image:
-  repository: zaafouri/pfe
-  tag: latest
+  repository: pfe2023.azurecr.io
+  name: sampleapi
+  tag: "55"
   pullPolicy: IfNotPresent
 
 replicaCount: 2
