@@ -1,7 +1,7 @@
 image:
   repository: pfe2023.azurecr.io
-  name: nginx
-  tag: "54"
+  name: sampleapi
+  tag: "55"
   pullPolicy: IfNotPresent
 
 replicaCount: 2
