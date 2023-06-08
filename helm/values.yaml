@@ -3,11 +3,12 @@
 
 image:
   # -- Image registry and repo
-  repository: docker.io/nginx
+  repository: pfe2023.azurecr.io
+  name: nginx
   # -- Pull policy
   pullPolicy: IfNotPresent
   # -- Tag of image to use
-  tag: latest
+  tag: "54"
 
 # -- Number of pod replicas
 replicaCount: 1
