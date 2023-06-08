@@ -9,7 +9,15 @@ image:
 
 # -- Number of pod replicas
 replicaCount: 1
-
+livenessProbe:
+  # -- URL path checked by liveness & readiness probes
+  path: /
+  # -- Number of liveness probe failures to tolerate
+  failureThreshold: 3
+  # -- Delay before liveness probe starts
+  initialDelaySeconds: 20
+  # -- Interval between liveness probe checks
+  periodSeconds: 20
 # -- Environmental vars, key value pairs, e.g. `MY_VAR: 'value 123'`
 env: {}
 #  MY_VAR: 'value 123'
