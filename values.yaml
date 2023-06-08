@@ -1,0 +1,32 @@
+image:
+  repository: zaafouri/pfe
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 2
+
+service:
+  targetPort: 3000
+  type: LoadBalancer
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi
+
+ingress:
+  enabled: false
+  #className: nginx
+  #host: nodejs-demoapp.kube.benco.io
+  #annotations:
+  #  nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+  #tls:
+  #  enabled: true
+  #  secretName: benco-io-cert
+
+podAnnotations:
+  prometheus.io/scrape: 'true'
+  prometheus.io/port: '3000'

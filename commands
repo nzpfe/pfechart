@@ -1,0 +1,9 @@
+1 - clone this code from AzureDevops 
+
+2 - docker build -t zaafouri/pfe:latest 
+
+3 - a. docker login (provide username and password)
+    b. docker push zaafouri/pfe:latest
+
+4 - a. kubectl create ns testapp
+    b. helm install nodejs-app . -f values.yaml -n testapp
