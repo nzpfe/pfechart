@@ -62,7 +62,15 @@ serviceAccount:
   create: false
   # -- The name of the service account to use. If not set a name is generated
   name:
-
+livenessProbe:
+  # -- URL path checked by liveness & readiness probes
+  path: /
+  # -- Number of liveness probe failures to tolerate
+  failureThreshold: 3
+  # -- Delay before liveness probe starts
+  initialDelaySeconds: 20
+  # -- Interval between liveness probe checks
+  periodSeconds: 20
 persistence:
   # -- Use persistent volume
   enabled: false
