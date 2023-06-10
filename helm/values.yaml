@@ -22,6 +22,7 @@ secretEnv: {}
 
 # Network traffic to the pods
 service:
+  port: 80
   targetPort: 3000
   type: LoadBalancer
 
