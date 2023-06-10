@@ -4,7 +4,7 @@
 image:
   repository: pfe2023.azurecr.io
   name: sampleapi
-  tag: "57"
+  tag: "58"
   pullPolicy: IfNotPresent
 
 # -- Number of pod replicas
@@ -30,6 +30,7 @@ secretEnv: {}
 
 # Network traffic to the pods
 service:
+  port: 80
   targetPort: 3000
   type: LoadBalancer
 
